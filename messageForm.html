@@ -1,3 +1,6 @@
+<!-- Abstract of messageForm.html: This page is where the user will enter their message. -->
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,8 +17,13 @@
 
 <body class="container">
 
+
+  
+  <!-- This is dynamicly generated based on the input provided from placeSelection.html --> 
   <p class="text-center h1 fixed-text" id="output"></p>
 
+    
+  <!-- The form containing the name, email, subject, and message fields. -->
   <form action="thankYou.html" class="form-center" autocomplete="off">
     <label>Name (optional):
       <input name="submitted-name" autocomplete="name">
@@ -55,14 +63,14 @@
 
 
 
-
+ <!-- Generates title -->
   <script>
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     document.getElementById('output').innerHTML = 'Write your message to <br>' + urlParams.get('place')
       ;
   </script>
-
+<!-- Same autofill function to prepopulate subjects -->
   <script>
     function autocomplete(inp, arr) {
       /*the autocomplete function takes two arguments,

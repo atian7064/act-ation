@@ -1,4 +1,4 @@
-<!-- This page is where the user which school or district they want to send a comment to. -->
+<!-- Abstract of placeSelection.html: This page is where the user which school or district they want to send a comment to. -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -15,18 +15,20 @@
 
 <body class="container">
 
-
+  <!-- Title -->
   <p class="text-center h1 fixed-text">ActAtion <br>Family to School</p>
-  <p class="h6">Enter your school or district</p>
+  <p class="h6">Enter your school or district</p
+  <!-- Form to type in name of School or District. Supports autocomplete. -->
   <form autocomplete="off" action=messageForm.html>
     <div class="autocomplete">
       <input id="myInput" class="inputField" type="text" name="place" placeholder="School or District">
     </div>
+    <!-- Takes the input entered into the form and passes it as a variable to the messageForm.html page. -->
     <input type="submit" class="btn btn-primary btn-lg pull-right" value="Next">
   </form>
 
 
-
+  <!-- JS function that handles autocomplete -->
   <script>
     function autocomplete(inp, arr) {
       /*the autocomplete function takes two arguments,
@@ -131,12 +133,6 @@
     /*initiate the autocomplete function on the "myInput" element, and pass along the places array as possible autocomplete values:*/
     autocomplete(document.getElementById("myInput"), places);
   </script>
-
-
-
-
-
-
 
 
 

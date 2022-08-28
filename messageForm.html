@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<head> 
   <meta charset="utf-8">
   <title>Send Comment</title>
   <link href="autoComplete.css" rel="stylesheet" type="text/css" />
@@ -14,27 +14,30 @@
 
 <body class="container">
 
-  <p class="text-center h1 fixed-text">ActAtion</p>
-  <p class="text-center h4" id="output"></p>
+  <p class="text-center h1 fixed-text" id="output"></p>
 
   <form action="thankYou.html" class="form-center" autocomplete="off">
-    <label>Name:
+    <label>Name (optional):
       <input name="submitted-name" autocomplete="name">
     </label>
+    <br>
 
     <label>Email (optional):
       <input name="email" autocomplete="email" type="email">
     </label>
+    <br>
 
-    <div class="autocomplete"> <label>What is your comment about?:
+    <div class="autocomplete"> <label>Subject:
         <input id="myInput" class="inputField" type="text" name="subject"> </label>
     </div>
+    <br>
 
 
 
-    <label>Write your comment:
-      <input name="comment" class="comment-box">
+    <label>Your message:
+      <textarea rows="2" cols="20" name="comment" wrap="hard" class="comment-box"></textarea>
     </label>
+    <br>
 
 
 
@@ -56,7 +59,7 @@
   <script>
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
-    document.getElementById('output').innerHTML = 'Write your comment to ' + urlParams.get('place')
+    document.getElementById('output').innerHTML = 'Write your message to <br>' + urlParams.get('place')
       ;
   </script>
 

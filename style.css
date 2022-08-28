@@ -35,6 +35,17 @@ html, body {
   border-top-right-radius: 0;
 }
 
+.form-center{
+    display:block;
+    width:50%;
+    margin:0 auto;
+}
+.comment-box{
+  height: 200px;
+  margin-top:20px;
+  display: block;
+}
+
 
 
 
